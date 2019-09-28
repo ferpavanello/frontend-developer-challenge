@@ -1,0 +1,25 @@
+.wrap-header > .description-header {
+  text-align: center;
+  color: #fff;
+}
+
+.wrap-header > .description-header > .medium-text {
+  position: relative;
+  top: 70px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 20px;
+}
+
+.wrap-header > .description-header > .big-text {
+  position: relative;
+  top: 85px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 40px;
+}
+
+.wrap-header > .description-header > .small-text {
+  position: relative;
+  top: 105px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 16px;
+}
