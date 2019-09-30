@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Linx</title>
 
+    <link
+      rel="shortcut icon"
+      href="https://www.linx.com.br/app/themes/linx/dist/images/favicons/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/container-top.css" />
     <link rel="stylesheet" href="css/wrap-header.css" />
     <link rel="stylesheet" href="css/header-buttons.css" />
+    <link rel="stylesheet" href="css/wrap-products.css" />
+    <link rel="stylesheet" href="css/products-list.css" />
+    <link rel="stylesheet" href="css/product-card.css" />
   </head>
   <body>
     <div class="container-top">
@@ -33,6 +40,16 @@
           <button class="button -last">Compartilhe</button>
         </div>
       </section>
+      <section class="wrap-products">
+        <h1 class="title">Sua seleção especial</h1>
+        <div class="products-list"></div>
+        <div class="more-products">
+          <button class="button">Ainda mais produtos aqui!</button>
+        </div>
+      </section>
     </div>
+
+    <script src="js/axios.min.js"></script>
+    <script src="js/products-list.js"></script>
   </body>
 </html>
