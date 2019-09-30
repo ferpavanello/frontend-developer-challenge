@@ -1,19 +1,23 @@
-let $listProducts = document.getElementsByClassName("products-list")[0];
+const $listProducts = document.getElementsByClassName("products-list")[0];
+const $buttonMoreProducts = document.getElementsByClassName("more-products")[0]
+  .children[0];
+let linkRequest =
+  "https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1";
 
-axios
-  .get(
-    "https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1"
-  )
-  .then(response => {
-    const data = response.data;
-    data.products.forEach(element => {
-      $listProducts.innerHTML += buildCard(element);
-      console.log(element.name);
+function loadProducts() {
+  axios
+    .get(linkRequest)
+    .then(response => {
+      const data = response.data;
+      linkRequest = "https://" + data.nextPage;
+      data.products.forEach(element => {
+        $listProducts.innerHTML += buildCard(element);
+      });
+    })
+    .catch(error => {
+      console.log(error);
     });
-  })
-  .catch(error => {
-    console.log(error);
-  });
+}
 
 function buildCard(element) {
   return `
@@ -28,3 +32,5 @@ function buildCard(element) {
   <div></div>
   `;
 }
+
+loadProducts();
