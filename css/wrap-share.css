@@ -1,19 +1,20 @@
-.wrap-products {
-  width: 60%;
-  position: relative;
-  left: 20%;
-  padding-top: 50px;
+.wrap-share {
+  padding-top: 165px;
 }
 
-.wrap-products > .title {
-  padding-top: 50px;
-}
-
-.more-products {
+.description-share > .text {
+  text-align: center;
+  color: #888;
   padding-top: 45px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 16px;
 }
 
-.more-products > .button {
+.submit-data {
+  padding-top: 50px;
+}
+
+.submit-data > .button {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
