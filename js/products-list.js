@@ -22,15 +22,28 @@ function loadProducts() {
 function buildCard(element) {
   return `
   <div class="product-card">
-    <img
-      src="${element.image}"
-      class="product-image"
-    />
-    <h4><b>${element.name}</b></h4>
-    <p>${element.description}</p>
+    <img src="${element.image}" class="product-image" />
+    <dl class="description-product">
+      <dd class="name">${element.name}</dd>
+      <dd class="text description">${element.description}</dd>
+      <dd class="text oldPrice">De: ${formatNumber(element.oldPrice)}</dd>
+      <dd class="price">Por: ${formatNumber(element.price)}</dd>
+      <dd class="text">Ou 2x ${formatNumber(element.price / 2)}</dd>
+    </dl>
+    <div class="card-button">
+      <button class="button">Comprar</button>
+    </div>
   </div>
-  <div></div>
   `;
+}
+
+function formatNumber(number) {
+  const format = {
+    minimumFractionDigits: 2,
+    style: "currency",
+    currency: "BRL"
+  };
+  return number.toLocaleString("pt-BR", format);
 }
 
 loadProducts();

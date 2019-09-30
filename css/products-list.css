@@ -1,6 +1,6 @@
 .products-list {
   padding-top: 50px;
   display: grid;
-  grid-template-columns: auto 0 auto 0 auto 0 auto;
-  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
 }
