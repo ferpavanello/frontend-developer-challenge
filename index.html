@@ -71,11 +71,18 @@
           </div>
           <div class="friends-email">
             <h1 class="title-input">E-mail:</h1>
-            <input type="email" id="email" class="friends-input" />
+            <input
+              type="email"
+              id="email"
+              class="friends-input"
+              onblur="validateEmail(this)"
+            />
           </div>
         </div>
         <div class="submit-data">
-          <button type="submit" class="button">Enviar agora</button>
+          <button onclick="sendEmail()" class="button" id="sendButton">
+            Enviar agora
+          </button>
         </div>
       </section>
     </div>
@@ -90,6 +97,10 @@
     </div>
 
     <script src="js/axios.min.js"></script>
+    <script src="js/smtp.js"></script>
     <script src="js/products-list.js"></script>
+    <script src="js/email-config.js"></script>
+    <script src="js/email-sending.js"></script>
+    <script src="js/validate-email.js"></script>
   </body>
 </html>
