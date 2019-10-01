@@ -13,7 +13,7 @@ async function sendEmail() {
       Subject: "A friend remembered you.",
       Body: `Hey ${$friendsName},
       A friend of yours indicates this site to you:
-      https://www.linx.com.br/`
+      https://ferpavanello-linx.herokuapp.com/`
     }).then(message => alert("Your friend will be happy, thanks."));
 
     $sendButton.disabled = false;
