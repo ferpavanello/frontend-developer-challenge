@@ -41,3 +41,8 @@
   border: 1px solid #707070;
   cursor: pointer;
 }
+
+.card-button > .button:hover {
+  background-color: #888;
+  color: #fff;
+}

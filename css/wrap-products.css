@@ -23,3 +23,8 @@
   border: 1px solid #707070;
   cursor: pointer;
 }
+
+.more-products > .button:hover {
+  background-color: #888;
+  color: #fff;
+}
